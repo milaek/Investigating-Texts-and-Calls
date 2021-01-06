@@ -1,0 +1,24 @@
+Task 0: Each time we go into a list to grab a value, the run time is O(1) since it does not change regardless of variables or lengths.
+	This is the only thing that we do in this operation, so although we pull from a list 7 seperate times, 
+	the big O still simplifies down to O(1).
+
+Task 1: Each time we have a for loop that runs n number of times it adds O(n) to our run time. We have a total of two for loops,
+	both of which run n number of times, and neiter of which are nested.
+	This gives us O(n + n), or O(2n). We can simplify this by dropping the modifier, which leaves us with a run time analysis of O(n).
+
+Task 2: We start with a for loop that runs n number of times, giving us O(n). Nested in that for loop is another for loop, but this second loop
+	has a set number of runs, 2, meaning it wont give any more n's to our Big O. We then use a sorting algorithm,
+	which has the run time of O(n log n). This leaves us with O(n + (nlogn)). We can simplify this by dropping the non-dominant terms,
+	leaving us with a run time analysis of O(nlogn).
+
+Task 3: We start with a for loop running n times, which gives us O(n). Checking the start of strings and appending the list each add an O(1),
+	but since we already have an O(n) we can simplify it out, seeing as it is non-dominant.
+	We then use a sorting algorithm so sort and create a new list, which adds O(nlogn). We have one other for loop that runs n times,
+	meaning we need do add one more O(n) to our equation. This leaves us with O(n + n + nlogn), or O(2n + nlogn).
+	With this in mind we can simplify and drop our non-dominant terms, leaving us with a run time analysis of O(nlogn)
+
+Task 4: We have 4 for loops in this program, each running n times. However, two of these for loops lead into the function
+	remove_non_marketers, which searches us through a dictionary in its if statement and deletes the item if it is found.
+	Both of these are nested which means we have O(2n + 2n*2n), the first 2n being the unaffected for loops. 
+	Using algebra this simplifies to O(2n + 4n^2). To further simplify the analysis we can drop the non-dominant terms and multipliers,
+	leaving us with a run time analysis of O(n^2).							
